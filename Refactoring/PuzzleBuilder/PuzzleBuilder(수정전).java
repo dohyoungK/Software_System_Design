@@ -29,26 +29,26 @@ public class PuzzleBuilder {
 		}
 		boolean result = false;
 		for (int i = 0; i < index; i++) {
-			if (dirs[i] == 0) { // °¡·Î
-				if (dir == 0) { // °¡·Î
+			if (dirs[i] == 0) { // å•Šè‚º
+				if (dir == 0) { // å•Šè‚º
 					if (ys[i] == y && ((x >= xs[i] && x <= xs[i] + values[i].length())
 							|| (x + value.length() >= xs[i] && x + value.length() <= xs[i] + values[i].length()))) {
 						result = true;
 						break;
 					}
-				} else { // ¼¼·Î
+				} else { // æŠ€è‚º
 					if (x >= xs[i] && x <= xs[i] + values[i].length() && ys[i] >= y && ys[i] <= y + value.length()) {
 						result = true;
 						break;
 					}
 				}
-			} else { // ¼¼·Î
-				if (dir == 0) { // °¡·Î
+			} else { // æŠ€è‚º
+				if (dir == 0) { // å•Šè‚º
 					if (xs[i] >= x && xs[i] <= x + value.length() && y >= ys[i] && y <= ys[i] + values[i].length()) {
 						result = true;
 						break;
 					}
-				} else { // ¼¼·Î
+				} else { // æŠ€è‚º
 					if (xs[i] == x && ((y >= ys[i] && y <= ys[i] + values[i].length())
 							|| (y + value.length() >= ys[i] && y + value.length() <= ys[i] + values[i].length()))) {
 						result = true;
