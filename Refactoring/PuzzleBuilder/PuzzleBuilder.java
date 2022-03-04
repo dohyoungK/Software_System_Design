@@ -47,26 +47,26 @@ public class PuzzleBuilder {
 
 	private boolean checkOverlapWord(String value, int x, int y, int direction, boolean result) {
 		for (int i = 0; i < index; i++) {
-			if (arrayDirection[i] == 0) { // °¡·Î
-				if (direction == 0) { // °¡·Î
+			if (arrayDirection[i] == 0) { // å•Šè‚º
+				if (direction == 0) { // å•Šè‚º
 					if (arrayY[i] == y && ((x >= arrayX[i] && x <= arrayX[i] + arrayValue[i].length())
 							|| (x + value.length() >= arrayX[i] && x + value.length() <= arrayX[i] + arrayValue[i].length()))) {
 						result = true;
 						break;
 					}
-				} else { // ¼¼·Î
+				} else { // æŠ€è‚º
 					if (x >= arrayX[i] && x <= arrayX[i] + arrayValue[i].length() && arrayY[i] >= y && arrayY[i] <= y + value.length()) {
 						result = true;
 						break;
 					}
 				}
-			} else { // ¼¼·Î
-				if (direction == 0) { // °¡·Î
+			} else { // æŠ€è‚º
+				if (direction == 0) { // å•Šè‚º
 					if (arrayX[i] >= x && arrayX[i] <= x + value.length() && y >= arrayY[i] && y <= arrayY[i] + arrayValue[i].length()) {
 						result = true;
 						break;
 					}
-				} else { // ¼¼·Î
+				} else { // æŠ€è‚º
 					if (arrayX[i] == x && ((y >= arrayY[i] && y <= arrayY[i] + arrayValue[i].length())
 							|| (y + value.length() >= arrayY[i] && y + value.length() <= arrayY[i] + arrayValue[i].length()))) {
 						result = true;
